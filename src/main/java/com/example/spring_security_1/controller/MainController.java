@@ -13,11 +13,11 @@ public class MainController {
 
     @GetMapping("/profile")
     public String profile() {
-        return "J'ai accès à cette page en modifiant mon application.properties, avec : spring.security.user.roles=ADMIN, USER";
+        return "J'ai aussi accès à cette page avec mes identifiants grâce au bean avec le role hierarchique ADMIN>USER";
     }
 
     @GetMapping("/admin")
     public String adminDashboard() {
-        return "J'ai aussi accès à cette page avec cette config : spring.security.user.roles=ADMIN, USER ";
+        return "J'ai accès à cette page avec mes identifiants grâce au bean avec le role hierarchique ";
     }
 }
